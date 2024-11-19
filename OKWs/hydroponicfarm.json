@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SkyGrow Hydroponics",
+    "description": "An urban farm using hydroponic systems to grow vegetables and herbs year-round.",
+    "contact": "info@skygrowhydroponics.com",
+    "keywords": ["hydroponics", "urban farming", "sustainability", "fresh produce"],
+    "contributors": [
+        "Alice Green",
+        "Bob Brown"
+    ],
+    "version": "2.1",
+    "development-stage": "Production",
+    "license": "CC-BY-SA-4.0",
+    "licensor": "SkyGrow Hydroponics LLC",
+    "documentation-home": "https://skygrowhydroponics.com/docs",
+    "archive-download": "https://skygrowhydroponics.com/downloads/manuals.zip",
+    "inventory-atoms": [
+        {
+            "identifier": "Nutrient Solutions",
+            "description": "Essential nutrients for plant growth in water.",
+            "link": "https://skygrowhydroponics.com/inventory/nutrients"
+        }
+    ],
+    "product-atoms": [
+        {
+            "identifier": "Leafy Greens",
+            "description": "Fresh lettuce, spinach, and kale.",
+            "link": "https://skygrowhydroponics.com/products/leafy-greens"
+        }
+    ],
+    "tool-list-atoms": [
+        {
+            "identifier": "Hydroponic Systems",
+            "description": "Equipment for soilless cultivation.",
+            "link": "https://skygrowhydroponics.com/tools/hydroponic-systems"
+        }
+    ],
+    "processes": [
+        {
+            "identifier": "Soilless Cultivation",
+            "description": "Growing plants without soil using nutrient solutions.",
+            "link": "https://skygrowhydroponics.com/processes/soilless-cultivation"
+        },
+        {
+            "identifier": "Vertical Farming",
+            "description": "Stacking plant beds vertically to save space.",
+            "link": "https://skygrowhydroponics.com/processes/vertical-farming"
+        }
+    ]
+}

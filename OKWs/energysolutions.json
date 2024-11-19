@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "EcoEnergy Solutions",
+    "description": "Provides solar panel installation and wind turbine services for residential and commercial clients.",
+    "contact": "contact@ecoenergysolutions.com",
+    "keywords": ["renewable energy", "solar panels", "wind turbines", "sustainability"],
+    "contributors": [
+        "Carlos Diaz",
+        "Emma Wang"
+    ],
+    "version": "3.5",
+    "development-stage": "Production",
+    "license": "GPL-3.0",
+    "licensor": "EcoEnergy Solutions Ltd.",
+    "documentation-home": "https://ecoenergysolutions.com/docs",
+    "archive-download": "https://ecoenergysolutions.com/downloads/installation-guides.zip",
+    "inventory-atoms": [
+        {
+            "identifier": "Solar Panels",
+            "description": "Photovoltaic panels for harnessing solar energy.",
+            "link": "https://ecoenergysolutions.com/inventory/solar-panels"
+        },
+        {
+            "identifier": "Wind Turbines",
+            "description": "Equipment for generating electricity from wind.",
+            "link": "https://ecoenergysolutions.com/inventory/wind-turbines"
+        }
+    ],
+    "product-atoms": [
+        {
+            "identifier": "Installed Solar Systems",
+            "description": "Complete solar energy systems installed on-site.",
+            "link": "https://ecoenergysolutions.com/products/solar-systems"
+        }
+    ],
+    "tool-list-atoms": [
+        {
+            "identifier": "Energy Auditing Tools",
+            "description": "Tools for assessing energy efficiency.",
+            "link": "https://ecoenergysolutions.com/tools/auditing-tools"
+        }
+    ],
+    "processes": [
+        {
+            "identifier": "Energy Auditing",
+            "description": "Assessing energy needs and efficiency.",
+            "link": "https://ecoenergysolutions.com/processes/energy-auditing"
+        },
+        {
+            "identifier": "Installation Services",
+            "description": "Professional installation of renewable energy systems.",
+            "link": "https://ecoenergysolutions.com/processes/installation-services"
+        }
+    ]
+}

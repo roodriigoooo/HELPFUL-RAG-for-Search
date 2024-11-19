@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Downtown Makerspace",
+    "description": "A collaborative workshop equipped with tools and materials for woodworking, metalworking, and 3D printing. Open to hobbyists and professionals alike.",
+    "contact": "contact@downtownmakerspace.org",
+    "keywords": ["makerspace", "woodworking", "metalworking", "3D printing", "collaboration"],
+    "contributors": [
+        "Jane Smith",
+        "John Doe"
+    ],
+    "version": "1.0",
+    "development-stage": "Production",
+    "license": "CC-BY-4.0",
+    "licensor": "Downtown Makerspace Inc.",
+    "documentation-home": "https://downtownmakerspace.org/docs",
+    "archive-download": "https://downtownmakerspace.org/downloads/resources.zip",
+    "inventory-atoms": [
+        {
+            "identifier": "3D Printer Filament",
+            "description": "Various types of filament for 3D printing.",
+            "link": "https://downtownmakerspace.org/inventory/filament"
+        },
+        {
+            "identifier": "Metal Sheets",
+            "description": "Assorted metal sheets for fabrication projects.",
+            "link": "https://downtownmakerspace.org/inventory/metal-sheets"
+        }
+    ],
+    "product-atoms": [
+        {
+            "identifier": "Custom Engraved Keychains",
+            "description": "Keychains made using laser cutters.",
+            "link": "https://downtownmakerspace.org/products/keychains"
+        }
+    ],
+    "tool-list-atoms": [
+        {
+            "identifier": "Laser Cutter",
+            "description": "High-precision laser cutter for various materials.",
+            "link": "https://downtownmakerspace.org/tools/laser-cutter"
+        },
+        {
+            "identifier": "CNC Machine",
+            "description": "Computer-controlled machine for cutting and milling.",
+            "link": "https://downtownmakerspace.org/tools/cnc-machine"
+        }
+    ],
+    "processes": [
+        {
+            "identifier": "Laser Cutting",
+            "description": "Precision cutting of materials using laser technology.",
+            "link": "https://downtownmakerspace.org/processes/laser-cutting"
+        },
+        {
+            "identifier": "CNC Machining",
+            "description": "Automated control of machining tools via computers.",
+            "link": "https://downtownmakerspace.org/processes/cnc-machining"
+        }
+    ]
+}

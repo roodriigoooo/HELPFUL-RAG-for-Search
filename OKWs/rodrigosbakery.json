@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Bread & Butter Bakery",
+    "description": "A bakery specializing in sourdough bread and handcrafted pastries using locally sourced ingredients.",
+    "contact": "bakery@breadandbutter.com",
+    "keywords": ["bakery", "artisanal bread", "pastries", "local ingredients"],
+    "contributors": [
+        "Rodrigo Sastre",
+        "Liam Johnson"
+    ],
+    "version": "2.0",
+    "development-stage": "Production",
+    "license": "CC-BY-NC-4.0",
+    "licensor": "Bread & Butter Bakery",
+    "documentation-home": "https://breadandbutter.com/docs",
+    "archive-download": "https://breadandbutter.com/downloads/recipes.zip",
+    "inventory-atoms": [
+        {
+            "identifier": "Organic Flour",
+            "description": "Flour milled from organically grown grains.",
+            "link": "https://breadandbutter.com/inventory/organic-flour"
+        }
+    ],
+    "product-atoms": [
+        {
+            "identifier": "Sourdough Loaves",
+            "description": "Bread made through natural fermentation.",
+            "link": "https://breadandbutter.com/products/sourdough-loaves"
+        }
+    ],
+    "tool-list-atoms": [
+        {
+            "identifier": "Stone Oven",
+            "description": "Traditional stone oven for baking.",
+            "link": "https://breadandbutter.com/tools/stone-oven"
+        }
+    ],
+    "processes": [
+        {
+            "identifier": "Baking",
+            "description": "The process of cooking food by dry heat.",
+            "link": "https://breadandbutter.com/processes/baking"
+        },
+        {
+            "identifier": "Fermentation",
+            "description": "The chemical breakdown of a substance by microorganisms.",
+            "link": "https://breadandbutter.com/processes/fermentation"
+        }
+    ]
+}
