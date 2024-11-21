@@ -1,0 +1,5 @@
+langchain==0.0.148
+transformers>=4.0.0
+sentence-transformers
+chromadb
+requests
