@@ -124,5 +124,8 @@ class SemanticJSONSplitter(TextSplitter):
         
         return '\n'.join(content_parts)
 
-
+def load_and_process_documents(directory_path: str) -> List[Document]:
+    splitter = SemanticJSONSplitter(max_chunk_size=500)
+    documents = load_okw_json(directory_path)
+    return splitter.split_documents(documents)
             
