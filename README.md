@@ -1,5 +1,8 @@
 # RAG for Search: HELPFUL
-A work in progress for plain-text based search method using reranking, perspectives and eventually agents. The document retrieval and reranking pipeline were done using LangChain and Jina ai. 
+A work in progress for plain-text based search method using ~~reranking, perspectives~~ and eventually agents. The 
+document retrieval and ~~reranking pipeline~~ was done using LangChain ~~and Jina ai.~~
+
+**Ignore all below this. Need to update** 
 
 ## Setup (will work towards making this more practical if possible)
 On the cloned directory:
