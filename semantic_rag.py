@@ -47,14 +47,14 @@ class SemanticJSONSplitter(TextSplitter):
             final_chunks.extend(chunks)
         return final_chunks
 
-    def _split_documents(self, document: Document) -> List[Document]:
+    def _split_document(self, document: Document) -> List[Document]:
         content_parts = document.page_content.split('\n')
         json_structure={}
 
         for part in content_parts:
             if part.startswith('Title: '):
                 json_structure['title'] = part[7:]
-            elif part.startwith('Description: '):
+            elif part.startswith('Description: '):
                 json_structure['description'] = part[13:]
             elif part.startswith('Keywords: '):
                 json_structure['keywords'] = [k.strip() for k in part[10:].split(',')]
