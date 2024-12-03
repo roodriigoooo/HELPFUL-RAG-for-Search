@@ -4,12 +4,41 @@ from langchain.text_splitter import TextSplitter
 import json
 import glob
 
+def create_document_content(data: Dict) -> str:
+    content_parts = []
+    content_parts.append(f"Title: {data.get('title', '')}")
+    content_parts.append(f"Description: {data.get('description', '')}")
+    content_parts.append(f"Keywords: {', '.join(data.get('keywords', []))}")
+    
+    for atom_type in ['inventory-atoms', 'product-atoms', 'tool-list-atoms']:
+        atoms = data.get(atom_type, [])
+        if atoms:
+            atom_descriptions = [f"{atom.get('identifier', '')}: {atom.get('description', '')}" 
+                               for atom in atoms]
+            content_parts.append(f"{atom_type.title()}: {', '.join(atom_descriptions)}")
+    
+    return '\n'.join(content_parts)
+    
+
+def load_okw_json(path: str) -> List[Document]:
+    documents = []
+    for file_path in glob.glob(f'{path}/*'):
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            content = create_document_content(data)
+            doc = Document(page_content=content, metadata={'title':data.get('title', '')})
+            documents.append(doc)
+    return documents
+    
 
 class SemanticJSONSplitter(TextSplitter):
     def __init__(self, max_chunk_size: int=1000):
         super().__init__()
         self.max_chunk_size = max_chunk_size
-        
+
+    def split_text(self, text:str) -> List[str]:
+        '''req. abstract method'''
+        return [text]
 
     def split_documents(self, documents: List[Document]) -> List[Document]:
         final_chunks = []
@@ -17,9 +46,8 @@ class SemanticJSONSplitter(TextSplitter):
             chunks = self._split_document(doc)
             final_chunks.extend(chunks)
         return final_chunks
-        
 
-    def _split_document(self, document: Document) -> List[Document]:
+    def _split_documents(self, document: Document) -> List[Document]:
         content_parts = document.page_content.split('\n')
         json_structure={}
 
@@ -52,7 +80,6 @@ class SemanticJSONSplitter(TextSplitter):
                 atom_chunks = self._chunk_atoms(atoms, atom_type, json_structure.get('title', ''))
                 chunks.extend(atom_chunks)
         return chunks
-        
 
     def _extract_atoms(self, content_parts: List[str], atom_type:str) -> List[Dict[str, str]]:
         atoms = []
@@ -67,7 +94,6 @@ class SemanticJSONSplitter(TextSplitter):
                             'description': description
                         })
         return atoms
-
 
     def _chunk_atoms(self, atoms: List[Dict[str, str]], atom_type: str, title: str) -> List[Document]:
         chunks = []
@@ -123,6 +149,7 @@ class SemanticJSONSplitter(TextSplitter):
                 content_parts.append(f"{atom_type.title()}: {atoms_text}")
         
         return '\n'.join(content_parts)
+
 
 def load_and_process_documents(directory_path: str) -> List[Document]:
     splitter = SemanticJSONSplitter(max_chunk_size=500)
