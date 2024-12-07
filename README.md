@@ -10,8 +10,7 @@ The current implementation achieves the following:
 for improved context. Document metatada is also utilizeed to further improve context. 
 - **Open Source Stack**: The current implementation is built entirely with open-source 
 components, making it more easily replicable and deployable. 
-
-**Ignore all below this. Need to update** 
+ 
 
 ## Setup (will work towards making this more practical if possible)
 On the cloned directory:
