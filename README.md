@@ -1,6 +1,10 @@
 # RAG for Search: HELPFUL
 A work in progress for plain-text based search method using reranking, perspectives and eventually agents. The document retrieval and reranking pipeline were done using LangChain and Jina ai. 
 
+- **kgsandagents branch**:
+
+    - A first, admittedly basic and naive implementation of Knowledge Graphs enhancements and agents to the already demo'd code.
+    - Still working on improving it, and making it more robust to get a demo worth showing working. in any case it is just a mock version of a KG and agents (that i hope to replace with open-source software such as crewAI), to more or less show how i think about these tools in the context of the project.
 ## Setup (will work towards making this more practical if possible)
 On the cloned directory:
 ```bash
