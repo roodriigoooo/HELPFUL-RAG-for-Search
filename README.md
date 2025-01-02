@@ -15,8 +15,8 @@ components, making it more easily replicable and deployable.
 - **kgsandagents branch**:
 
     - A first, admittedly basic and naive implementation of Knowledge Graphs enhancements and agents to the already demo'd code.
-    - Still working on improving it, and making it more robust to get a demo worth showing working. in any case it is just a mock version of a KG and agents (that i hope to replace with open-source software such as crewAI), to more or less show how i think about these tools in the context of the project.
-## Setup (will work towards making this more practical if possible)
+    - Still working on improving it. In any case it is just a mock version of a KG and agents (the newest version now uses CrewAI), to more or less show how i think about these tools in the context of the project.
+### Setup (will add more on Windows instructions ASAP)
 On the cloned directory:
 ```bash
 # Linux or macOS
@@ -43,7 +43,7 @@ alternative paths computation, etc.
 Now you can place your JSON data files in the OKWs directory, and then import and use the 
 semantic RAG implementation: 
 ```python
-from semantic_rag import load_and_process_documents
+from preprocessing import load_and_process_documents
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 
