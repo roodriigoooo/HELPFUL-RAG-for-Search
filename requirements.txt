@@ -3,3 +3,4 @@ transformers>=4.0.0
 sentence-transformers
 chromadb
 requests
+crewai
