@@ -2,7 +2,7 @@
 A work in progress for plain-text based search method using Retrieval-Augmented Generation 
 (RAG) that aims to preserve semantic relationships within structured data entries. The focus 
 so far is to maintain data coherence and enhance retrieval accuracy through use-case specific 
-splitting and processing. 
+splitting and processing, and the aim now is to enhance the RAG approaches through Agentic and Knowledge Graph enhanced strategies. 
 
 The current implementation achieves the following: 
 - **Semantic Document Splitting**: Preserve meaningful relationships in structured data. 
@@ -10,51 +10,23 @@ The current implementation achieves the following:
 for improved context. Document metatada is also utilizeed to further improve context. 
 - **Open Source Stack**: The current implementation is built entirely with open-source 
 components, making it more easily replicable and deployable. 
+
+This branch is dedicated to develop the following features:
+- **Agentic RAG through CrewAI**: Specialized agents for different aspects of the RAG pipeline.
+
+    - Query Analysis and refinement.
+    - KG exploration and traversal agent. 
+    - Document retrieval and ranking agent. 
+    - Response synthesis and fact-checking agent. 
+
+- **KG Enhanced Retrieval**: Integration of graph-based and vector-based retrieval methods, with dynamic subgraph extraction based on query context. 
+- **Improved Query Understanding**: Structured query decomposition into capabilities, resources, and constraints. Context-aware query refinement. 
+
+### Stack
+- CrewAI for multi-agent orchestration. 
+- LangChain for RAG components. 
+- HuggingFace for embeddings and language models. 
+- Networkx for KG implementation. 
+- Chroma for vector storage. 
  
-
-## Setup (will work towards making this more practical if possible)
-On the cloned directory:
-```bash
-# Linux or macOS
-python3 -m venv venv
-source venv/bin/activate
-
-# Windows
-python -m venv venv
-venv\Scripts\activate
-```
-then install the dependencies
-
-```bash
-pip install -r requirements.txt
-```
-## Ongoing Work
-- Integration with Knowledge Graphs (Supply trees) for enhanced relationship mapping, 
-alternative paths computation, etc. 
-- Integration of specialized agents for highly domain-specific tasks. 
-- Auto-RAG? To automatically detect appropriate methods of query search. 
-
-## Usage
-
-Now you can place your JSON data files in the OKWs directory, and then import and use the 
-semantic RAG implementation: 
-```python
-from semantic_rag import load_and_process_documents
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
-
-#load and process docs with semantic splitting
-documents = load_and_process_documents('./OKWs/')
-
-#init embeddings and vector store
-embeddings = HuggingFaceEmbeddings(
-	model_name='sentence_transformers/all-MiniLM-L6-v2'
-)
-vectorstore = Chroma.from_documents(
-	documents=documents,
-	embeddings=embeddings
-)
-
-retriever = vectorstore.as_retriever(search_kwargs={'k': 5})
-```
 
