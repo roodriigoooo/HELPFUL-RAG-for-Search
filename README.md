@@ -16,16 +16,20 @@ components, making it more easily replicable and deployable.
 
     - A first, admittedly basic and naive implementation of Knowledge Graphs enhancements and agents to the already demo'd code.
     - Still working on improving it. In any case it is just a mock version of a KG and agents (the newest version now uses CrewAI), to more or less show how i think about these tools in the context of the project.
-### Setup (will add more on Windows instructions ASAP)
+### Setup 
 On the cloned directory:
 ```bash
 # Linux or macOS
 python3 -m venv venv
 source venv/bin/activate
 
-# Windows
+# Windows (Command Prompt)
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate.bat
+
+# Windows (Powershell)
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 ```
 then install the dependencies
 
@@ -41,7 +45,18 @@ alternative paths computation, etc.
 ## Usage
 
 Now you can place your JSON data files in the OKWs directory, and then import and use the 
-semantic RAG implementation: 
+semantic RAG implementation. I assume each 'document' to follow the following structure:
+```json
+{
+    "title": "Your Title",
+    "description": "Your Description",
+    "keywords": ["keyword1", "keyword2"],
+    "inventory-atoms": [...],
+    "product-atoms": [...],
+    "tool-list-atoms": [...]
+}
+```
+
 ```python
 from preprocessing import load_and_process_documents
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -60,5 +75,16 @@ vectorstore = Chroma.from_documents(
 )
 
 retriever = vectorstore.as_retriever(search_kwargs={'k': 5})
+
+# to perform a search
+question = 'your search query here, whether just keywords or complete sentences'
+results = retriever.get_relevant_documents(question)
+
+# Process results
+for doc in results:
+    print(f"Title: {doc.metadata.get('title', 'No Title')}")
+    print(f"Content: {doc.page_content}\n")
 ```
+
+**Still working on developing the Knowledge Graph and Agents enhanced version.**
 
