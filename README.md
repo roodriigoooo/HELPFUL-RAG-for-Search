@@ -36,14 +36,11 @@ then install the dependencies
 ```bash
 pip install -r requirements.txt
 ```
-## Ongoing Work
-- Integration with Knowledge Graphs (Supply trees) for enhanced relationship mapping, 
-alternative paths computation, etc. 
-- Integration of specialized agents for highly domain-specific tasks. 
-- Auto-RAG? To automatically detect appropriate methods of query search. 
+#### Windows Specific Issues I ran into
+- If you get ```'python' is not recognized```: Ensure Python is added to your PATH.
+- If PowerShell execution policy blocks activation: Run ```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
 
 ## Usage
-
 Now you can place your JSON data files in the OKWs directory, and then import and use the 
 semantic RAG implementation. I assume each 'document' to follow the following structure:
 ```json
@@ -86,5 +83,9 @@ for doc in results:
     print(f"Content: {doc.page_content}\n")
 ```
 
-**Still working on developing the Knowledge Graph and Agents enhanced version.**
+## Ongoing Work
+- Integration with Knowledge Graphs (Supply trees) for enhanced relationship mapping, 
+alternative paths computation, etc. 
+- Integration of specialized agents for highly domain-specific tasks. 
+- Auto-RAG? To automatically detect appropriate methods of query search. 
 
