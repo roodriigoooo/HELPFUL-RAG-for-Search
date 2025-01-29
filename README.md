@@ -86,7 +86,7 @@ for doc in results:
 
 ## Ongoing Work
 - Integration with Knowledge Graphs (Supply trees) for enhanced relationship mapping, 
-alternative paths computation, etc. 
+alternative paths computation, memory concerns, etc. 
 - Integration of specialized agents for highly domain-specific tasks. 
 - Auto-RAG? To automatically detect appropriate methods of query search. 
 
