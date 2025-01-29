@@ -14,8 +14,9 @@ components, making it more easily replicable and deployable.
 
 - **kgsandagents branch**:
 
-    - A first, admittedly basic and naive implementation of Knowledge Graphs enhancements and agents to the already demo'd code.
-    - Still working on improving it. In any case it is just a mock version of a KG and agents (the newest version now uses CrewAI), to more or less show how i think about these tools in the context of the project.
+    - A first, admittedly basic and naive implementation of Knowledge Graphs enhancements and agents to the already demo'd code. It is just a mock version of a KG and agents, to more or less show how i think about these tools in the context of the project.
+ 
+  
 ### Setup 
 On the cloned directory:
 ```bash
