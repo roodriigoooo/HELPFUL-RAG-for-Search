@@ -6,10 +6,8 @@ splitting and processing.
 
 The current implementation achieves the following: 
 - **Semantic Document Splitting**: Preserve meaningful relationships in structured data. 
-- **Coherent Information Retrieva**: Related information is kept together during processing, 
-for improved context. Document metatada is also utilizeed to further improve context. 
-- **Open Source Stack**: The current implementation is built entirely with open-source 
-components, making it more easily replicable and deployable. 
+- **Coherent Information Retrieval**: Related information is kept together during processing, 
+for improved context. Document metatada is also utilized to further improve context. 
  
 
 - **kgsandagents branch**:
