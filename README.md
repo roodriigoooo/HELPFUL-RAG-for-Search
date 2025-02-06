@@ -84,7 +84,8 @@ for doc in results:
 
 ## Ongoing Work
 - Integration with Knowledge Graphs (Supply trees) for enhanced relationship mapping, 
-alternative paths computation, memory concerns, etc. 
-- Integration of specialized agents for highly domain-specific tasks. 
-- Auto-RAG? To automatically detect appropriate methods of query search. 
+alternative paths computation, memory concerns, etc. OKH -> OKW matching should return an array of supply trees.
+- Integration of specialized agents for highly domain-specific tasks. (too soon for this)
+- Auto-RAG? To automatically detect appropriate methods of query search. (too soon for this)
+- Improve and refactor chunking methods to further enhance retrieval, thinking about other matching scenarios. 
 
